@@ -1,0 +1,30 @@
+config - Obtain any variable configuration of the application. 
+	middleware - Software that acts as a bridge between operating system or database and applications.
+		isAuthenticated.js - To ensure that routes only run when user is logged in.
+	config.json - It stores the login information that we need to connect three databases for different stages of the app (demo, test and production).
+	passport.js - Logic to do the login authentication. First it checks to see if the user is using a valid email, if email is valid then it checks to see if the password to the email is correct.
+
+models - This is similar to the schemas and seed file which hold files that act as templates for the SQL tables.
+	index.js - Consolidate all models into one file and export it out.
+	user.js - It generates the user table using SQL database similar to schema and export it to index.js.
+
+public - Folder which mainly consist of the frontend that includes Javascript, HTML and CSS.
+	js - Folder that contains Javascript that is written for each page
+		login.js - Javascript code that is written for the login.html page which has the function to get the email and password to pass to api routes.
+		members.js - Javascript code that is written for the members.html page which has the function to get the page of the user that is logged in.
+		signup.js - Javascript code that is written for the signup.html page which has the function to create a new user and post to signup routes.
+	stylesheets - Folder that contains the styling or CSS for the HTML page.
+		style.css - Styling that is required for the login and signup page.
+	login.html - Login page
+	members.html - Member's page
+	signup.html - Sign up page
+
+routes - Contains routes for api and html.
+	api-routes.js - API routes for the JSON data that is used to create user, get user and logout .
+	html-routes.js - Routes for HTML pages that is used to see which page to display.
+
+package.json - Contains all metadata that is relevant to the project.
+
+server.js - The main file that runs when the application starts and it includes the express middlewear, data to connect the routes and models to a listening port.
+
+
